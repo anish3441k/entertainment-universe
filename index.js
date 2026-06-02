@@ -37,7 +37,7 @@ poster:
 "https://picsum.photos/300/450?batman",
 
 page: "movie.html"
-}
+},
 
 {
 title: "Naruto",
