@@ -1,10 +1,69 @@
 const sidebar = document.getElementById('sidebar');
 const menuBtn = document.getElementById('menuBtn');
-const heroTitle = document.getElementById('heroTitle');
-const heroText = document.getElementById('heroText');
 
+// =========================
+// HERO SWIPER
+// =========================
 
+const slides = document.querySelectorAll('.slide');
+
+let currentSlide = 0;
+
+function autoSlide(){
+
+slides.forEach(slide => {
+slide.classList.remove('active');
+});
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+
+slides[currentSlide].classList.add('active');
+
+}
+
+setInterval(autoSlide,5000);
+
+// =========================
+// SIDEBAR
+// =========================
+
+function toggleSidebar(){
+
+sidebar.classList.toggle('active');
+menuBtn.classList.toggle('active');
+
+}
+
+// AUTO CLOSE SIDEBAR
+
+document.addEventListener('click', function(event){
+
+const clickedInsideSidebar =
+sidebar.contains(event.target);
+
+const clickedMenu =
+menuBtn.contains(event.target);
+
+if(
+!clickedInsideSidebar &&
+!clickedMenu &&
+sidebar.classList.contains('active')
+){
+
+sidebar.classList.remove('active');
+menuBtn.classList.remove('active');
+
+}
+
+});
+
+// =========================
 // DATABASE
+// =========================
 
 let moviesDatabase = [
 
@@ -14,28 +73,23 @@ type: "movie",
 year: "2014",
 rating: "8.7",
 genre: "Sci-Fi",
-description: "A team of explorers travel through a wormhole in space.",
-poster: "https://picsum.photos/300/450?interstellar",
+description:
+"A team of explorers travel through a wormhole in space.",
+poster:
+"https://picsum.photos/300/450?interstellar",
 page: "movie.html"
 },
 
 {
 title: "Batman",
-
+type: "movie",
+year: "2022",
+rating: "8.1",
 genre: "Action",
-
 description:
 "Batman protects Gotham City from dangerous criminals.",
-
-director: "Matt Reeves",
-
-music: "Michael Giacchino",
-
-budget: "$200 Million",
-
 poster:
 "https://picsum.photos/300/450?batman",
-
 page: "movie.html"
 },
 
@@ -45,8 +99,10 @@ type: "anime",
 year: "2002",
 rating: "8.4",
 genre: "Anime",
-description: "A young ninja dreams of becoming Hokage.",
-poster: "https://picsum.photos/300/450?naruto",
+description:
+"A young ninja dreams of becoming Hokage.",
+poster:
+"https://picsum.photos/300/450?naruto",
 page: "anime.html"
 },
 
@@ -56,25 +112,44 @@ type: "webseries",
 year: "2017",
 rating: "8.8",
 genre: "Sci-Fi",
-description: "A mysterious time travel story.",
-poster: "https://picsum.photos/300/450?dark",
+description:
+"A mysterious time travel story.",
+poster:
+"https://picsum.photos/300/450?dark",
 page: "web-series.html"
+},
+
+{
+title: "GTA 6",
+type: "game",
+year: "2025",
+rating: "9.5",
+genre: "Open World",
+description:
+"The next generation Grand Theft Auto experience.",
+poster:
+"https://picsum.photos/300/450?gta6",
+page: "games.html"
+},
+
+{
+title: "Your Name",
+type: "anime-movie",
+year: "2016",
+rating: "8.9",
+genre: "Anime Movie",
+description:
+"A beautiful emotional anime movie.",
+poster:
+"https://picsum.photos/300/450?yourname",
+page: "anime-movie.html"
 }
 
 ];
 
-
-// SIDEBAR
-
-function toggleSidebar(){
-
-sidebar.classList.toggle('active');
-menuBtn.classList.toggle('active');
-
-}
-
-
+// =========================
 // HOME
+// =========================
 
 function goHome(){
 
@@ -82,14 +157,16 @@ window.location.href = 'index.html';
 
 }
 
-
+// =========================
 // SEARCH
+// =========================
 
 function globalSearch(event){
 
 if(event.key === "Enter"){
 
-const input = event.target.value.toLowerCase().trim();
+const input =
+event.target.value.toLowerCase().trim();
 
 const result = moviesDatabase.find(item =>
 item.title.toLowerCase().includes(input)
@@ -109,12 +186,14 @@ alert("Content not found");
 
 }
 
-
+// =========================
 // SEARCH SUGGESTIONS
+// =========================
 
 function showSuggestions(value){
 
-const box = document.getElementById("suggestionsBox");
+const box =
+document.getElementById("suggestionsBox");
 
 box.innerHTML = "";
 
@@ -123,7 +202,8 @@ return;
 }
 
 const matches = moviesDatabase.filter(item =>
-item.title.toLowerCase().includes(value.toLowerCase())
+item.title.toLowerCase()
+.includes(value.toLowerCase())
 );
 
 matches.forEach(match => {
@@ -146,8 +226,9 @@ box.appendChild(div);
 
 }
 
-
-// DYNAMIC TRENDING MOVIES
+// =========================
+// DYNAMIC TRENDING
+// =========================
 
 function loadTrendingMovies(){
 
@@ -165,12 +246,17 @@ const card = document.createElement("div");
 card.className = "movie-card";
 
 card.innerHTML = `
+
 <img src="${movie.poster}">
 
 <div class="movie-info">
+
 <h3>${movie.title}</h3>
+
 <p>${movie.genre} • ${movie.year}</p>
+
 </div>
+
 `;
 
 card.onclick = function(){
@@ -192,42 +278,61 @@ container.appendChild(card);
 
 loadTrendingMovies();
 
-
+// =========================
 // ROUTING
+// =========================
 
 function openMovie(){
-window.location.href = "movie.html";
+
+window.location.href = "movies-browse.html";
+
 }
 
 function openWebSeries(){
+
 window.location.href = "web-series.html";
+
 }
 
 function openAnime(){
+
 window.location.href = "anime.html";
+
 }
 
 function openAnimeMovie(){
+
 window.location.href = "anime-movie.html";
+
 }
 
 function openGame(){
+
 window.location.href = "games.html";
+
 }
 
 function openCartoon(){
+
 window.location.href = "cartoon.html";
+
 }
 
 function openWishlist(){
+
 alert("Wishlist coming soon");
+
 }
 
 function openSettings(){
+
 alert("Settings coming soon");
+
 }
 
+// =========================
 // TMDB TEST
+// =========================
 
 searchTMDB("batman")
 .then(data => {

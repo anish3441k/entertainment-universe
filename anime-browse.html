@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime</title>
+
+<link rel="stylesheet" href="index.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="movies">
+
+<div class="particles"></div>
+
+<div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
+
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+</div>
+
+<aside class="sidebar" id="sidebar">
+
+<button onclick="goHome()">🏠 Home</button>
+
+<button onclick="window.location.href='anime-browse.html'">🎬 Anime</button>
+
+<button onclick="openWebSeries()">📺 Web Series</button>
+
+<button onclick="openAnime()">🎌 Anime</button>
+
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
+
+<button onclick="openGame()">🎮 Games</button>
+
+<button onclick="openCartoon()">🧸 Cartoons</button>
+
+<button onclick="openWishlist()">❤️ Wishlist</button>
+
+<button onclick="openSettings()">⚙️ Settings</button>
+
+</aside>
+
+<header class="topbar">
+
+<div class="logo" onclick="goHome()">
+ENTERTAINMENT UNIVERSE
+</div>
+
+<div class="search-box">
+
+<input type="text"
+placeholder="Search..."
+onkeypress="globalSearch(event)"
+oninput="showSuggestions(this.value)">
+
+<div id="suggestionsBox"></div>
+
+</div>
+
+<div class="auth">
+
+<button class="login-btn">
+Login
+</button>
+
+<button class="signup-btn">
+Signup
+</button>
+
+</div>
+
+</header>
+
+<section class="hero-swiper">
+
+<div class="slide active">
+
+<img src="https://picsum.photos/1600/900?anime">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Attack On Titan</h1>
+
+<p>Discover legendary anime worlds.</p>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Explore
+</button>
+
+<button class="info-btn">
+More Info
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="slide">
+
+<img src="https://picsum.photos/1600/900?anime">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Naruto</h1>
+
+<p>Top rated anime adventures.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="content-row">
+
+<div class="row-header">
+<h2>🎌 Shonen Anime</h2>
+</div>
+
+<div class="movie-row">
+
+<div class="movie-card" onclick="window.location.href='anime.html'">
+
+<img src="https://picsum.photos/300/450?11">
+
+<div class="movie-info">
+<h3>Interstellar</h3>
+<p>Sci-Fi</p>
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?12">
+
+<div class="movie-info">
+<h3>Batman</h3>
+<p>Action</p>
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?13">
+
+<div class="movie-info">
+<h3>Dune</h3>
+<p>Adventure</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="content-row">
+
+<div class="row-header">
+<h2>💕 Romance Anime</h2>
+</div>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?21">
+
+<div class="movie-info">
+<h3>Popular</h3>
+<p>Trending</p>
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?22">
+
+<div class="movie-info">
+<h3>Top Rated</h3>
+<p>Worldwide</p>
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?23">
+
+<div class="movie-info">
+<h3>New Releases</h3>
+<p>Featured</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="index.js"></script>
+<script src="swiper.js"></script>
+
+</body>
+</html>

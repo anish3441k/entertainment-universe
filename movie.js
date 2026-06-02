@@ -1,6 +1,8 @@
 const selectedMovie =
 JSON.parse(localStorage.getItem("selectedMovie"));
 
+// LOAD MOVIE DETAILS
+
 if(selectedMovie){
 
 const title =
@@ -12,23 +14,66 @@ document.getElementById("movieDescription");
 const poster =
 document.getElementById("moviePoster");
 
+const rating =
+document.getElementById("movieRating");
+
+const genre =
+document.getElementById("movieGenre");
+
+const year =
+document.getElementById("movieYear");
+
 if(title){
-title.innerText = selectedMovie.title || "";
+
+title.innerText =
+selectedMovie.title || "";
+
 }
 
 if(description){
+
 description.innerText =
 selectedMovie.description || "";
+
 }
 
 if(poster && selectedMovie.poster){
-poster.src = selectedMovie.poster;
-}
+
+poster.src =
+selectedMovie.poster;
 
 }
 
-const sidebar = document.getElementById('sidebar');
-const menuBtn = document.getElementById('menuBtn');
+if(rating){
+
+rating.innerText =
+selectedMovie.rating || "8.5";
+
+}
+
+if(genre){
+
+genre.innerText =
+selectedMovie.genre || "Entertainment";
+
+}
+
+if(year){
+
+year.innerText =
+selectedMovie.year || "2025";
+
+}
+
+}
+
+// SIDEBAR
+
+const sidebar =
+document.getElementById('sidebar');
+
+const menuBtn =
+document.getElementById('menuBtn');
 
 function toggleSidebar(){
 
@@ -38,9 +83,21 @@ menuBtn.classList.toggle('active');
 
 }
 
-function goHome(){
+// AUTO CLOSE SIDEBAR
 
-window.location.href='index.html';
+document.addEventListener('click',function(event){
+
+const clickedInsideSidebar =
+sidebar.contains(event.target);
+
+const clickedMenu =
+menuBtn.contains(event.target);
+
+if(
+!clickedInsideSidebar &&
+!clickedMenu &&
+sidebar.classList.contains('active')
+){
 
 sidebar.classList.remove('active');
 
@@ -48,22 +105,89 @@ menuBtn.classList.remove('active');
 
 }
 
+});
+
+// HOME
+
+function goHome(){
+
+window.location.href='index.html';
+
+}
+
+// ROUTING
+
+function openMovie(){
+
+window.location.href='movies-browse.html';
+
+}
+
+function openWebSeries(){
+
+window.location.href='webseries-browse.html';
+
+}
+
+function openAnime(){
+
+window.location.href='anime-browse.html';
+
+}
+
+function openAnimeMovie(){
+
+window.location.href='anime-movies-browse.html';
+
+}
+
+function openGame(){
+
+window.location.href='games-browse.html';
+
+}
+
+function openCartoon(){
+
+window.location.href='cartoons-browse.html';
+
+}
+
+function openWishlist(){
+
+alert("Wishlist coming soon");
+
+}
+
+function openSettings(){
+
+alert("Settings coming soon");
+
+}
 
 // GLOBAL SEARCH SYSTEM
-function globalSearch(event) {
 
-if (event.key === "Enter") {
+function globalSearch(event){
 
-const input = event.target.value.toLowerCase().trim();
+if(event.key==="Enter"){
 
-const result = searchData.find(item =>
+const input =
+event.target.value.toLowerCase().trim();
+
+const result =
+searchData.find(item =>
 item.name.toLowerCase() === input
 );
 
-if (result) {
-window.location.href = result.page;
-} else {
+if(result){
+
+window.location.href =
+result.page;
+
+}else{
+
 alert("Content not found");
+
 }
 
 }

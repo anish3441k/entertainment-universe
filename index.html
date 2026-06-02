@@ -85,19 +85,25 @@ Signup
 
 </header>
 
-<!-- HERO -->
+<!-- HERO SWIPER -->
 
-<section class="hero" id="home">
+<section class="hero-swiper">
+
+<!-- SLIDE 1 -->
+
+<div class="slide active">
+
+<img src="https://picsum.photos/1600/900?interstellar">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<h1 id="heroTitle">
+<h1>
 Interstellar
 </h1>
 
-<p id="heroText">
+<p>
 A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
 </p>
 
@@ -115,41 +121,347 @@ More Info
 
 </div>
 
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="slide">
+
+<img src="https://picsum.photos/1600/900?anime">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+Attack On Titan
+</h1>
+
+<p>
+Humanity fights for survival against gigantic Titans beyond the walls.
+</p>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Watch Trailer
+</button>
+
+<button class="info-btn" onclick="openAnime()">
+More Info
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="slide">
+
+<img src="https://picsum.photos/1600/900?game">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+GTA 6
+</h1>
+
+<p>
+Explore the next generation open world crime universe.
+</p>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Watch Trailer
+</button>
+
+<button class="info-btn" onclick="openGame()">
+More Info
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SLIDE 4 -->
+
+<div class="slide">
+
+<img src="https://picsum.photos/1600/900?webseries">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+Dark
+</h1>
+
+<p>
+A mysterious time travel thriller that connects generations.
+</p>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Watch Trailer
+</button>
+
+<button class="info-btn" onclick="openWebSeries()">
+More Info
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- TRENDING MOVIES -->
+<!-- FAMOUS ACTORS -->
 
 <section class="content-row">
 
 <div class="row-header">
-<h2>Trending Movies</h2>
+<h2>🌍 Famous Actors & Actresses Worldwide</h2>
 </div>
 
-<div class="movie-row" id="trendingMovies"></div>
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?actor1">
+
+<div class="movie-info">
+
+<h3>Robert Downey Jr.</h3>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?actor2">
+
+<div class="movie-info">
+
+<h3>Tom Cruise</h3>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?actor3">
+
+<div class="movie-info">
+
+<h3>Scarlett Johansson</h3>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?actor4">
+
+<div class="movie-info">
+
+<h3>Shah Rukh Khan</h3>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- CONTINUE WATCHING -->
+<!-- TRENDING WORLDWIDE -->
 
 <section class="content-row">
 
 <div class="row-header">
-<h2>Continue Watching</h2>
+<h2>🔥 Trending Worldwide</h2>
 </div>
 
+<div class="movie-row" id="trendingMovies">
 
+</div>
 
-<div class="wide-card" onclick="openWebSeries()">
+</section>
 
-<img src="https://picsum.photos/700/400?32">
+<!-- TRENDING ANIME -->
 
-<div class="wide-overlay"></div>
+<section class="content-row">
 
-<div class="wide-info">
+<div class="row-header">
+<h2>🎌 Trending Anime</h2>
+</div>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?anime1">
+
+<div class="movie-info">
+
+<h3>Naruto</h3>
+
+<p>Anime</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?anime2">
+
+<div class="movie-info">
+
+<h3>One Piece</h3>
+
+<p>Anime</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?anime3">
+
+<div class="movie-info">
+
+<h3>Demon Slayer</h3>
+
+<p>Anime</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POPULAR GAMES -->
+
+<section class="content-row">
+
+<div class="row-header">
+<h2>🎮 Popular Games</h2>
+</div>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?game1">
+
+<div class="movie-info">
+
+<h3>GTA 6</h3>
+
+<p>Open World</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?game2">
+
+<div class="movie-info">
+
+<h3>Cyberpunk</h3>
+
+<p>RPG</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?game3">
+
+<div class="movie-info">
+
+<h3>Forza Horizon</h3>
+
+<p>Racing</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WEB SERIES -->
+
+<section class="content-row">
+
+<div class="row-header">
+<h2>📺 Trending Web Series</h2>
+</div>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?series1">
+
+<div class="movie-info">
 
 <h3>Dark</h3>
 
-<p>2 Episodes Remaining</p>
+<p>Thriller</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?series2">
+
+<div class="movie-info">
+
+<h3>Stranger Things</h3>
+
+<p>Sci-Fi</p>
+
+</div>
+
+</div>
+
+<div class="movie-card">
+
+<img src="https://picsum.photos/300/450?series3">
+
+<div class="movie-info">
+
+<h3>Wednesday</h3>
+
+<p>Mystery</p>
 
 </div>
 
@@ -162,6 +474,7 @@ More Info
 <script src="index.js"></script>
 <script src="tmdb.js"></script>
 <script src="router.js"></script>
+<script src="swiper.js"></script>
 
 </body>
 

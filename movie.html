@@ -4,16 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interstellar</title>
+<title>Entertainment Details</title>
 
 <link rel="stylesheet" href="movie.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-
-<!-- MENU BUTTON -->
 
 <div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
 
@@ -23,50 +22,41 @@
 
 </div>
 
-<!-- SIDEBAR -->
-
 <aside class="sidebar" id="sidebar">
 
-<button onclick="openHome()">🏠 Home</button>
+<button onclick="window.location.href='index.html'">🏠 Home</button>
 
-<button onclick="openMovie()">🎬 Movies</button>
+<button onclick="window.location.href='movie.html'">🎬 Movies</button>
 
-<button onclick="openWebSeries()">📺 Web Series</button>
+<button onclick="window.location.href='web-series.html'">📺 Web Series</button>
 
-<button onclick="openAnime()">🎌 Anime</button>
+<button onclick="window.location.href='anime.html'">🎌 Anime</button>
 
-<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
+<button onclick="window.location.href='anime-movie.html'">🍿 Anime Movies</button>
 
-<button onclick="openCartoon()">🧸 Cartoons</button>
+<button onclick="window.location.href='games.html'">🎮 Games</button>
 
-<button onclick="openGame()">🎮 Games</button>
+<button onclick="window.location.href='cartoon-smart.html'">🧸 Cartoons</button>
 
-<button onclick="openWishlist()">❤️ Wishlist</button>
+<button>❤️ Wishlist</button>
 
-<button onclick="openSettings()">⚙️ Settings</button>
+<button>⚙️ Settings</button>
 
 </aside>
 
-<!-- TOPBAR -->
-
 <header class="topbar">
 
-<div class="logo" onclick="goHome()">
+<div class="logo" onclick="window.location.href='index.html'">
 ENTERTAINMENT UNIVERSE
 </div>
 
 <div class="search-box">
-<input type="text" onkeypress="globalSearch(event)" placeholder="Search Movies, Actors, Anime...">
-</div>
 
-<div class="auth">
-<button class="login-btn">Login</button>
-<button class="signup-btn">Signup</button>
+<input type="text" placeholder="Search Entertainment...">
+
 </div>
 
 </header>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -74,93 +64,52 @@ ENTERTAINMENT UNIVERSE
 
 <div class="hero-content">
 
-<img class="poster" src="https://picsum.photos/500/750?1">
+<img class="poster" src="https://picsum.photos/500/700?90">
 
 <div class="movie-info">
 
-<h1 id="movieTitle">Interstellar</h1>
+<h1>Interstellar</h1>
 
-<p class="tagline" id="movieDescription">
+<p class="tagline">
 Mankind was born on Earth. It was never meant to die here.
 </p>
 
 <div class="meta">
+
 <span>2014</span>
-<span>PG‑13</span>
-<span>2h 49m</span>
 <span>Sci‑Fi</span>
-<span>Adventure</span>
+<span>2h 49m</span>
+
 </div>
 
 <div class="ratings">
-<div>⭐ 8.6 IMDb</div>
-<div>🍅 95%</div>
-<div>🎬 74%</div>
+
+<div>⭐ IMDb 8.7/10</div>
+<div>🍅 Rotten Tomatoes 91%</div>
+
 </div>
 
 <p class="description">
-A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival while uncovering mysteries beyond imagination.
-</p>
 
-<!-- TECH INLINE -->
+A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+
+</p>
 
 <div class="tech-inline">
 
 <div class="tech-item">
-<span>DIRECTOR</span>
+<span>Director</span>
 <p>Christopher Nolan</p>
 </div>
 
 <div class="tech-item">
-<span>MUSIC</span>
+<span>Music</span>
 <p>Hans Zimmer</p>
 </div>
 
 <div class="tech-item">
-<span>BUDGET</span>
+<span>Budget</span>
 <p>$165 Million</p>
-</div>
-
-<div class="tech-item">
-<span>COLLECTION</span>
-<p>$730 Million</p>
-</div>
-
-</div>
-
-
-<!-- AWARDS -->
-
-<div class="awards-inline">
-
-<div class="award-block won">
-
-<span>🏆 WON</span>
-
-<p>
-Oscar — Best Visual Effects
-</p>
-
-</div>
-
-<div class="award-block nominated">
-
-<span>🎖 NOMINATED</span>
-
-<p>
-Best Original Score
-</p>
-
-</div>
-
-<div class="award-block nominated">
-
-<span>🎖 NOMINATED</span>
-
-<p>
-Best Production Design
-</p>
-
 </div>
 
 </div>
@@ -172,11 +121,7 @@ Best Production Design
 </button>
 
 <button class="wishlist-btn">
-+ Wishlist
-</button>
-
-<button class="share-btn">
-↗
+❤️ Wishlist
 </button>
 
 </div>
@@ -187,168 +132,82 @@ Best Production Design
 
 </section>
 
-<!-- TRAILER -->
-
 <section class="section">
 
 <div class="section-header">
-<h2>Official Trailer</h2>
+<h2>🏆 Awards</h2>
 </div>
 
-<div class="trailer-box">
+<div class="awards-inline">
 
-<iframe
-src="https://www.youtube.com/embed/zSWdZVtXT7E"
-title="Trailer"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<div class="award-block won">
+<span>Academy Awards</span>
+<p>Won Best Visual Effects</p>
+</div>
+
+<div class="award-block nominated">
+<span>Oscar Nominations</span>
+<p>5 Additional Nominations</p>
+</div>
 
 </div>
 
 </section>
 
-<!-- STREAMING -->
-
 <section class="section">
 
 <div class="section-header">
-<h2>Streaming Platforms</h2>
+<h2>📺 Where To Watch</h2>
 </div>
 
 <div class="platform-grid">
 
 <div class="platform-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+<p>Netflix</p>
 </div>
 
 <div class="platform-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png">
+<p>Prime Video</p>
 </div>
 
 <div class="platform-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
-</div>
-
-<div class="platform-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg">
+<p>Disney+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- STORY -->
-
 <section class="section">
 
 <div class="section-header">
-<h2>Story Overview</h2>
-</div>
-
-<div class="story-card">
-
-<p>
-Earth’s future has been riddled by disasters, famines, and droughts. A team of explorers undertake the most important mission in human history.
-</p>
-
-</div>
-
-</section>
-
-<!-- CAST -->
-
-<section class="section">
-
-<div class="section-header">
-<h2>Top Cast</h2>
+<h2>🎭 Cast</h2>
 </div>
 
 <div class="cast-grid">
 
-<div class="cast-card" onclick="openActor()">
-<img src="https://picsum.photos/300/350?11">
+<div class="cast-card">
+<img src="https://picsum.photos/300/400?201">
 <div class="cast-info">
 <h3>Matthew McConaughey</h3>
 <p>Cooper</p>
 </div>
 </div>
 
-<div class="cast-card" onclick="openActor()">
-<img src="https://picsum.photos/300/350?12">
+<div class="cast-card">
+<img src="https://picsum.photos/300/400?202">
 <div class="cast-info">
 <h3>Anne Hathaway</h3>
 <p>Brand</p>
 </div>
 </div>
 
-<div class="cast-card" onclick="openActor()">
-<img src="https://picsum.photos/300/350?13">
+<div class="cast-card">
+<img src="https://picsum.photos/300/400?203">
 <div class="cast-info">
 <h3>Jessica Chastain</h3>
 <p>Murph</p>
 </div>
-</div>
-
-<div class="cast-card" onclick="openActor()">
-<img src="https://picsum.photos/300/350?14">
-<div class="cast-info">
-<h3>Michael Caine</h3>
-<p>Professor Brand</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- SCREENSHOTS -->
-
-<section class="section">
-
-<div class="section-header">
-<h2>Screenshots & Gallery</h2>
-</div>
-
-<div class="gallery-row">
-
-<img src="https://picsum.photos/600/350?21">
-<img src="https://picsum.photos/600/350?22">
-<img src="https://picsum.photos/600/350?23">
-<img src="https://picsum.photos/600/350?24">
-
-</div>
-
-</section>
-
-<!-- SIMILAR -->
-
-<section class="section">
-
-<div class="section-header">
-<h2>Similar Movies</h2>
-</div>
-
-<div class="similar-grid">
-
-<div class="similar-card" onclick="openMovie()">
-<img src="https://picsum.photos/300/450?31">
-<h3>Inception</h3>
-</div>
-
-<div class="similar-card" onclick="openMovie()">
-<img src="https://picsum.photos/300/450?32">
-<h3>Dune</h3>
-</div>
-
-<div class="similar-card" onclick="openMovie()">
-<img src="https://picsum.photos/300/450?33">
-<h3>Arrival</h3>
-</div>
-
-<div class="similar-card" onclick="openMovie()">
-<img src="https://picsum.photos/300/450?34">
-<h3>Gravity</h3>
 </div>
 
 </div>
@@ -357,8 +216,6 @@ Earth’s future has been riddled by disasters, famines, and droughts. A team of
 
 <script src="index.js"></script>
 <script src="movie.js"></script>
-<script src="tmdb.js"></script>
-<script src="router.js"></script>
 
 </body>
 </html>
