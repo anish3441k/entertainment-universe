@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actor Profile</title>
+
+<link rel="stylesheet" href="actor.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
+
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+</div>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+<button onclick="openHome()">🏠 Home</button>
+
+<button onclick="openMovie()">🎬 Movies</button>
+
+<button onclick="openWebSeries()">📺 Web Series</button>
+
+<button onclick="openAnime()">🎌 Anime</button>
+
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
+
+<button onclick="openCartoon()">🧸 Cartoons</button>
+
+<button onclick="openGame()">🎮 Games</button>
+
+<button onclick="openWishlist()">❤️ Wishlist</button>
+
+<button onclick="openSettings()">⚙️ Settings</button>
+
+</aside>
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+<div class="logo" onclick="openHome()">
+ENTERTAINMENT UNIVERSE
+</div>
+
+<div class="search-box">
+<input type="text" onkeypress="globalSearch(event)" placeholder="Search Movies, Actors, Anime...">
+</div>
+
+<div class="auth">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Signup</button>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<div class="left-side">
+
+<img class="actor-image" src="https://picsum.photos/500/750?actor">
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fas fa-globe"></i></a>
+
+</div>
+
+</div>
+
+<div class="actor-info">
+
+<p class="profession">
+ACTOR • PRODUCER
+</p>
+
+<h1>Matthew McConaughey</h1>
+
+<p class="tagline">
+Academy Award winning actor known for Interstellar, Dallas Buyers Club and True Detective.
+</p>
+
+<div class="meta">
+
+<span>Born: Nov 4, 1969</span>
+<span>Texas, USA</span>
+<span>Oscar Winner</span>
+
+</div>
+
+<div class="quick-info">
+
+<div class="info-item">
+<span>Known For</span>
+<p>Interstellar</p>
+</div>
+
+<div class="info-item">
+<span>Awards</span>
+<p>48 Wins</p>
+</div>
+
+<div class="info-item">
+<span>Movies</span>
+<p>56+</p>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button class="follow-btn">
++ Follow
+</button>
+
+<button class="share-btn">
+↗
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BIO -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Biography</h2>
+</div>
+
+<div class="bio-card">
+
+<p>
+Matthew McConaughey is an American actor and producer known for his charismatic performances in both dramatic and science-fiction films. His work spans cinema, television and voice acting, making him one of Hollywood’s most recognizable stars.
+</p>
+
+</div>
+
+</section>
+
+<!-- AWARDS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Awards & Achievements</h2>
+</div>
+
+<div class="award-timeline">
+
+<div class="award-card">
+
+<h3>🏆 Oscar — Best Actor</h3>
+
+<p class="award-movie">
+Dallas Buyers Club
+</p>
+
+<span>2014</span>
+
+</div>
+
+<div class="award-card">
+
+<h3>🎬 Golden Globe</h3>
+
+<p class="award-movie">
+True Detective
+</p>
+
+<span>2015</span>
+
+</div>
+
+<div class="award-card">
+
+<h3>⭐ Critics Choice</h3>
+
+<p class="award-movie">
+Interstellar
+</p>
+
+<span>2015</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FILMOGRAPHY -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Complete Filmography</h2>
+</div>
+
+<div class="movies-grid">
+
+<div class="movie-card" onclick="openMovie()">
+<img src="https://picsum.photos/300/450?movie1">
+<div class="movie-info">
+<h3>Interstellar</h3>
+<p>Cooper • 2014</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openMovie()">
+<img src="https://picsum.photos/300/450?movie2">
+<div class="movie-info">
+<h3>Dallas Buyers Club</h3>
+<p>Ron Woodroof • 2013</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openMovie()">
+<img src="https://picsum.photos/300/450?movie3">
+<div class="movie-info">
+<h3>The Gentlemen</h3>
+<p>Mickey Pearson • 2019</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openWebSeries()">
+<img src="https://picsum.photos/300/450?movie4">
+<div class="movie-info">
+<h3>True Detective</h3>
+<p>Rust Cohle • 2014</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openMovie()">
+<img src="https://picsum.photos/300/450?movie5">
+<div class="movie-info">
+<h3>Sing</h3>
+<p>Buster Moon • 2016</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openMovie()">
+<img src="https://picsum.photos/300/450?movie6">
+<div class="movie-info">
+<h3>The Lincoln Lawyer</h3>
+<p>Mick Haller • 2011</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<script src="actor.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
+
+</body>
+</html>

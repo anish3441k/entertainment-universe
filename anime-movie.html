@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Last Naruto Movie</title>
+
+<link rel="stylesheet" href="anime-movie.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+
+<aside class="sidebar" id="sidebar">
+
+<button onclick="openHome()">🏠 Home</button>
+
+<button onclick="openMovie()">🎬 Movies</button>
+
+<button onclick="openWebSeries()">📺 Web Series</button>
+
+<button onclick="openAnime()">🎌 Anime</button>
+
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
+
+<button onclick="openCartoon()">🧸 Cartoons</button>
+
+<button onclick="openGame()">🎮 Games</button>
+
+<button onclick="openWishlist()">❤️ Wishlist</button>
+
+<button onclick="openSettings()">⚙️ Settings</button>
+
+</aside>
+
+<header class="topbar">
+
+<div class="logo" onclick="goHome()">
+ENTERTAINMENT UNIVERSE
+</div>
+
+<div class="search-box">
+<input type="text" onkeypress="globalSearch(event)" placeholder="Search Anime Movies...">
+</div>
+
+<div class="auth">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Signup</button>
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<img class="movie-poster" src="https://picsum.photos/500/750?narutomovie">
+
+<div class="movie-info">
+
+<p class="studio">STUDIO PIERROT</p>
+
+<h1>THE LAST</h1>
+
+<p class="subtitle">Naruto the Movie</p>
+
+<div class="meta">
+
+<span>2014</span>
+<span>1h 52m</span>
+<span>Adventure</span>
+<span>Fantasy</span>
+<span>Anime Film</span>
+
+</div>
+
+<div class="ratings">
+
+<div>⭐ 7.6</div>
+<div>🍅 92%</div>
+<div>🎌 Anime Movie</div>
+
+</div>
+
+<p class="description">
+Two years after the Fourth Great Ninja War, Naruto must stop Toneri Otsutsuki from kidnapping Hinata and destroying Earth using the Moon.
+</p>
+
+<!-- TECH INFO -->
+
+<div class="tech-inline">
+
+<div class="tech-item">
+<span>Budget</span>
+<p>$19 Million</p>
+</div>
+
+<div class="tech-item">
+<span>Collection</span>
+<p>$31 Million</p>
+</div>
+
+<div class="tech-item">
+<span>Director</span>
+<p>Tsuneo Kobayashi</p>
+</div>
+
+<div class="tech-item">
+<span>Music</span>
+<p>Yasuharu Takanashi</p>
+</div>
+
+</div>
+
+<!-- AWARDS -->
+
+<div class="awards-inline">
+
+<div class="award-block won">
+<span>🏆 WON</span>
+<p>Tokyo Anime Award</p>
+</div>
+
+<div class="award-block nominated">
+<span>🎖 NOMINATED</span>
+<p>Best Animated Feature</p>
+</div>
+
+<div class="award-block nominated">
+<span>🎖 NOMINATED</span>
+<p>Best Anime Film Music</p>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Watch Trailer
+</button>
+
+<button class="wishlist-btn">
++ Wishlist
+</button>
+
+<button class="share-btn">
+↗
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STREAMING -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Streaming Platforms</h2>
+</div>
+
+<div class="platform-grid">
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg">
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAILER -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Official Trailer</h2>
+</div>
+
+<div class="trailer-box">
+
+<iframe
+src="https://www.youtube.com/embed/tA3yE4_t6SY"
+title="Trailer"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Story Overview</h2>
+</div>
+
+<div class="story-box">
+
+<p>
+As peace returns to the Hidden Leaf Village, Naruto faces his most emotional mission yet. While Toneri plans to reshape the world, Naruto and his friends must protect Hinata and uncover secrets tied to the Otsutsuki clan.
+</p>
+
+</div>
+
+</section>
+
+<!-- CAST -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Voice Cast</h2>
+</div>
+
+<div class="cast-grid">
+
+<div class="cast-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?narutoactor">
+<h3>Junko Takeuchi</h3>
+<p>Naruto Uzumaki</p>
+</div>
+
+<div class="cast-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?hinata">
+<h3>Nana Mizuki</h3>
+<p>Hinata Hyuga</p>
+</div>
+
+<div class="cast-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?sasuke">
+<h3>Noriaki Sugiyama</h3>
+<p>Sasuke Uchiha</p>
+</div>
+
+<div class="cast-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?sakura">
+<h3>Chie Nakamura</h3>
+<p>Sakura Haruno</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SCREENSHOTS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Screenshots</h2>
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://picsum.photos/500/300?anime1">
+<img src="https://picsum.photos/500/300?anime2">
+<img src="https://picsum.photos/500/300?anime3">
+<img src="https://picsum.photos/500/300?anime4">
+
+</div>
+
+</section>
+
+<!-- SIMILAR -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Similar Anime Movies</h2>
+</div>
+
+<div class="similar-grid">
+
+<div class="similar-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?suzume">
+<h3>Suzume</h3>
+</div>
+
+<div class="similar-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?yourname">
+<h3>Your Name</h3>
+</div>
+
+<div class="similar-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?weathering">
+<h3>Weathering With You</h3>
+</div>
+
+<div class="similar-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?bubble">
+<h3>Bubble</h3>
+</div>
+
+</div>
+
+</section>
+
+<script src="anime-movie.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
+
+</body>
+</html>

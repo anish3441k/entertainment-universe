@@ -1,0 +1,296 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#050816,#18002f,#0c1126);
+color:white;
+overflow-x:hidden;
+}
+
+.topbar{
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px 0 100px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(20px);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+letter-spacing:2px;
+cursor:pointer;
+}
+
+.search-box{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.search-box input{
+width:55%;
+padding:16px 24px;
+border:none;
+outline:none;
+border-radius:40px;
+background:rgba(255,255,255,0.08);
+color:white;
+}
+
+.auth{
+display:flex;
+gap:15px;
+}
+
+.auth button{
+padding:12px 20px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+}
+
+.login-btn{
+background:rgba(255,255,255,0.08);
+color:white;
+}
+
+.signup-btn{
+background:white;
+color:black;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+width:60px;
+height:60px;
+border-radius:18px;
+background:rgba(255,255,255,0.08);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:6px;
+cursor:pointer;
+z-index:3000;
+}
+
+.bar{
+width:28px;
+height:3px;
+background:white;
+border-radius:10px;
+}
+
+.sidebar{
+position:fixed;
+top:0;
+left:-320px;
+width:300px;
+height:100vh;
+background:rgba(0,0,0,0.88);
+padding:120px 20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+transition:0.5s;
+z-index:2500;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar button{
+padding:18px;
+border:none;
+border-radius:18px;
+background:rgba(255,255,255,0.06);
+color:white;
+cursor:pointer;
+text-align:left;
+}
+
+.hero{
+position:relative;
+padding:70px 60px;
+background:url('https://picsum.photos/1600/900?animevoice') center/cover;
+overflow:hidden;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.45));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+display:flex;
+gap:55px;
+align-items:center;
+}
+
+.actor-image{
+width:340px;
+border-radius:35px;
+}
+
+.actor-info{
+max-width:850px;
+}
+
+.career{
+letter-spacing:4px;
+opacity:0.7;
+margin-bottom:18px;
+}
+
+.actor-info h1{
+font-size:72px;
+margin-bottom:10px;
+}
+
+.japanese-name{
+font-size:28px;
+opacity:0.8;
+margin-bottom:28px;
+}
+
+.meta{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.meta span{
+padding:10px 18px;
+border-radius:30px;
+background:rgba(255,255,255,0.08);
+}
+
+.description{
+line-height:1.9;
+margin-bottom:35px;
+}
+
+.socials{
+display:flex;
+gap:18px;
+}
+
+.socials a{
+width:58px;
+height:58px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.socials a:hover{
+transform:translateY(-6px) scale(1.05);
+}
+
+.section{
+padding:60px;
+}
+
+.section-header{
+margin-bottom:25px;
+}
+
+.section-header h2{
+font-size:42px;
+}
+
+.awards-grid,
+.roles-grid,
+.books-grid,
+.related-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.award-card,
+.role-card,
+.book-card,
+.related-card{
+background:rgba(255,255,255,0.06);
+border-radius:28px;
+overflow:hidden;
+transition:0.5s;
+}
+
+.role-card:hover,
+.book-card:hover,
+.related-card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.role-card img,
+.book-card img,
+.related-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.award-card,
+.role-info,
+.book-card h3,
+.book-card p,
+.related-card h3{
+padding:18px;
+}
+
+.award-card span{
+opacity:0.7;
+}
+
+.music-box{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.music-item{
+padding:24px;
+border-radius:24px;
+background:rgba(255,255,255,0.06);
+font-size:18px;
+}
+
+
+.bar{
+transition:0.4s;
+}
+
+.menu-btn.active .bar:nth-child(1){
+transform:rotate(45deg) translate(6px,6px);
+}
+
+.menu-btn.active .bar:nth-child(2){
+opacity:0;
+}
+
+.menu-btn.active .bar:nth-child(3){
+transform:rotate(-45deg) translate(7px,-7px);
+}

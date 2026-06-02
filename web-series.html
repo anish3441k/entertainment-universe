@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dark Web Series Page</title>
+
+<link rel="stylesheet" href="web-series.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="menu-btn" onclick="toggleSidebar()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+
+<aside class="sidebar" id="sidebar">
+
+<button onclick="openHome()">🏠 Home</button>
+
+<button onclick="openMovie()">🎬 Movies</button>
+
+<button onclick="openWebSeries()">📺 Web Series</button>
+
+<button onclick="openAnime()">🎌 Anime</button>
+
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
+
+<button onclick="openCartoon()">🧸 Cartoons</button>
+
+<button onclick="openGame()">🎮 Games</button>
+
+<button onclick="openWishlist()">❤️ Wishlist</button>
+
+<button onclick="openSettings()">⚙️ Settings</button>
+
+</aside>
+
+<header class="topbar">
+
+<div class="logo" onclick="goHome()">
+ENTERTAINMENT UNIVERSE
+</div>
+
+<div class="search-box">
+<input type="text" onkeypress="globalSearch(event)" placeholder="Search Web Series...">
+</div>
+
+<div class="auth">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Signup</button>
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<img class="series-poster" src="https://picsum.photos/500/750?dark">
+
+<div class="series-info">
+
+<p class="platform">NETFLIX ORIGINAL SERIES</p>
+
+<h1>DARK</h1>
+
+<div class="meta">
+
+<span>3 Seasons</span>
+<span>26 Episodes</span>
+<span>Sci‑Fi</span>
+<span>Thriller</span>
+<span>Completed</span>
+
+</div>
+
+<div class="ratings">
+
+<div>⭐ 8.7</div>
+<div>🔥 Popular</div>
+<div>📺 Web Series</div>
+
+</div>
+
+<p class="description">
+
+A family saga with a supernatural twist set in a German town where the disappearance of two young children exposes the relationships among four families.
+
+</p>
+
+<!-- TECH INFO -->
+
+<div class="tech-inline">
+
+<div class="tech-item">
+<span>Creator</span>
+<p>Baran bo Odar</p>
+</div>
+
+<div class="tech-item">
+<span>Language</span>
+<p>German</p>
+</div>
+
+<div class="tech-item">
+<span>Episodes</span>
+<p>26</p>
+</div>
+
+<div class="tech-item">
+<span>Runtime</span>
+<p>45–60 min</p>
+</div>
+
+<div class="tech-item">
+<span>Budget</span>
+<p>$40 Million</p>
+</div>
+
+<div class="tech-item">
+<span>Collection</span>
+<p>Global Streaming Hit</p>
+</div>
+
+</div>
+
+<!-- AWARDS -->
+
+<div class="awards-inline">
+
+<div class="award-block">
+<span>🏆 WON</span>
+<p>Grimme Award</p>
+</div>
+
+<div class="award-block">
+<span>🎖 NOMINATED</span>
+<p>Best International Series</p>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button class="watch-btn">
+▶ Watch Trailer
+</button>
+
+<button class="wishlist-btn">
++ Wishlist
+</button>
+
+<button class="share-btn">
+↗
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STREAMING -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Streaming Platforms</h2>
+</div>
+
+<div class="platform-grid">
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg">
+</div>
+
+</div>
+
+</section>
+
+<!-- SEASONS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Seasons</h2>
+</div>
+
+<div class="season-grid">
+
+<div class="season-card">
+<h3>Season 1</h3>
+<p>10 Episodes</p>
+<span>2017</span>
+</div>
+
+<div class="season-card">
+<h3>Season 2</h3>
+<p>8 Episodes</p>
+<span>2019</span>
+</div>
+
+<div class="season-card">
+<h3>Season 3</h3>
+<p>8 Episodes</p>
+<span>2020</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAILER -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Official Trailer</h2>
+</div>
+
+<div class="trailer-box">
+
+<iframe
+src="https://www.youtube.com/embed/ESEUoa-mz2c"
+title="Dark Trailer"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Story Overview</h2>
+</div>
+
+<div class="story-box">
+
+<p>
+
+Dark explores the consequences of time travel and how it impacts human nature across generations. The mystery deepens as timelines intertwine and hidden secrets emerge.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CAST -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Main Cast</h2>
+</div>
+
+<div class="cast-grid">
+<div class="cast-card" onclick="openActor()">
+<img src="https://picsum.photos/300/350?actor1">
+<h3>Louis Hofmann</h3>
+<p>Jonas Kahnwald</p>
+</div>
+
+<div class="cast-card" onclick="openActor()">
+<img src="https://picsum.photos/300/350?actor2">
+<h3>Lisa Vicari</h3>
+<p>Martha Nielsen</p>
+</div>
+
+<div class="cast-card" onclick="openActor()">
+<img src="https://picsum.photos/300/350?actor3">
+<h3>Andreas Pietschmann</h3>
+<p>The Stranger</p>
+</div>
+
+<div class="cast-card" onclick="openActor()">
+<img src="https://picsum.photos/300/350?actor4">
+<h3>Maja Schöne</h3>
+<p>Hannah Kahnwald</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SCREENSHOTS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Screenshots</h2>
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://picsum.photos/500/300?dark1">
+<img src="https://picsum.photos/500/300?dark2">
+<img src="https://picsum.photos/500/300?dark3">
+<img src="https://picsum.photos/500/300?dark4">
+
+</div>
+
+</section>
+
+<!-- SIMILAR -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Similar Web Series</h2>
+</div>
+
+<div class="similar-grid">
+
+<div class="similar-card" onclick="openWebSeries()">
+<img src="https://picsum.photos/300/450?strangerthings">
+<h3>Stranger Things</h3>
+</div>
+
+<div class="similar-card" onclick="openWebSeries()">
+<img src="https://picsum.photos/300/450?1899">
+<h3>1899</h3>
+</div>
+
+<div class="similar-card" onclick="openWebSeries()">
+<img src="https://picsum.photos/300/450?breakingbad">
+<h3>Breaking Bad</h3>
+</div>
+
+<div class="similar-card" onclick="openWebSeries()">
+<img src="https://picsum.photos/300/450?lost">
+<h3>Lost</h3>
+</div>
+
+</div>
+
+</section>
+
+<script src="web-series.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
+
+</body>
+</html>

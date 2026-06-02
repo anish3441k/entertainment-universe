@@ -1,0 +1,28 @@
+[
+{
+"title": "Interstellar",
+"type": "movie",
+"year": "2014",
+"rating": "8.7",
+"genre": "Sci-Fi",
+"page": "movie.html"
+},
+
+{
+"title": "Batman",
+"type": "movie",
+"year": "2022",
+"rating": "8.1",
+"genre": "Action",
+"page": "movie.html"
+},
+
+{
+"title": "Naruto",
+"type": "anime",
+"year": "2002",
+"rating": "8.4",
+"genre": "Anime",
+"page": "anime.html"
+}
+]
