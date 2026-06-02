@@ -102,16 +102,33 @@ padding-bottom: 40px;
 left:0;
 }
 
-.sidebar button{
-padding:18px;
-border:none;
-border-radius:18px;
-background:rgba(255,255,255,0.06);
-color:white;
-cursor:pointer;
-font-size:16px;
-transition:0.4s ease;
-text-align:left;
+.sidebar{
+
+position: fixed;
+top: 0;
+left: -320px;
+
+width: 300px;
+height: 100vh;
+
+background: rgba(10,10,20,0.95);
+
+backdrop-filter: blur(20px);
+
+padding: 20px;
+
+display: flex;
+flex-direction: column;
+gap: 15px;
+
+overflow-y: auto;
+
+z-index: 999;
+
+transition: 0.4s;
+
+padding-bottom: 120px;
+
 }
 
 .sidebar button:hover{
@@ -450,4 +467,8 @@ color: white;
 
 .suggestion-item:hover{
 background: #222;
+}
+
+.sidebar button:last-child{
+margin-bottom: 80px;
 }
