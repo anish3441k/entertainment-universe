@@ -4,9 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Entertainment Details</title>
+<title>Final Naruto Anime Page</title>
 
-<link rel="stylesheet" href="movie.css">
+<link rel="stylesheet" href="anime.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -15,45 +15,46 @@
 <body>
 
 <div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
-
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
-
 </div>
 
 <aside class="sidebar" id="sidebar">
 
-<button onclick="window.location.href='index.html'">🏠 Home</button>
+<button onclick="openHome()">🏠 Home</button>
 
-<button onclick="window.location.href='movie.html'">🎬 Movies</button>
+<button onclick="openMovie()">🎬 Movies</button>
 
-<button onclick="window.location.href='web-series.html'">📺 Web Series</button>
+<button onclick="openWebSeries()">📺 Web Series</button>
 
-<button onclick="window.location.href='anime.html'">🎌 Anime</button>
+<button onclick="openAnime()">🎌 Anime</button>
 
-<button onclick="window.location.href='anime-movie.html'">🍿 Anime Movies</button>
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
 
-<button onclick="window.location.href='games.html'">🎮 Games</button>
+<button onclick="openCartoon()">🧸 Cartoons</button>
 
-<button onclick="window.location.href='cartoon-smart.html'">🧸 Cartoons</button>
+<button onclick="openGame()">🎮 Games</button>
 
-<button>❤️ Wishlist</button>
+<button onclick="openWishlist()">❤️ Wishlist</button>
 
-<button>⚙️ Settings</button>
+<button onclick="openSettings()">⚙️ Settings</button>
 
 </aside>
 
 <header class="topbar">
 
-<div class="logo" onclick="window.location.href='index.html'">
+<div class="logo" onclick="goHome()">
 ENTERTAINMENT UNIVERSE
 </div>
 
 <div class="search-box">
+<input type="text" onkeypress="globalSearch(event)" placeholder="Search Anime, Movies, Games...">
+</div>
 
-<input type="text" placeholder="Search Entertainment...">
-
+<div class="auth">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Signup</button>
 </div>
 
 </header>
@@ -64,52 +65,53 @@ ENTERTAINMENT UNIVERSE
 
 <div class="hero-content">
 
-<img class="poster" src="https://picsum.photos/500/700?90">
+<img class="anime-poster" src="https://picsum.photos/500/750?anime">
 
-<div class="movie-info">
+<div class="anime-info">
 
-<h1>Interstellar</h1>
+<p class="studio">STUDIO PIERROT</p>
 
-<p class="tagline">
-Mankind was born on Earth. It was never meant to die here.
-</p>
+<h1>NARUTO</h1>
+
+<p class="japanese-title">ナルト</p>
 
 <div class="meta">
 
-<span>2014</span>
-<span>Sci‑Fi</span>
-<span>2h 49m</span>
+<span>220 Episodes</span>
+<span>11 Movies</span>
+<span>Adventure</span>
+<span>Shonen</span>
+<span>Completed</span>
 
 </div>
 
 <div class="ratings">
 
-<div>⭐ IMDb 8.7/10</div>
-<div>🍅 Rotten Tomatoes 91%</div>
+<div>⭐ 8.4</div>
+<div>🔥 Popular</div>
+<div>🎌 Anime</div>
 
 </div>
 
 <p class="description">
-
-A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
-
+Naruto Uzumaki, a young ninja rejected by his village, dreams of becoming Hokage while carrying the power of the Nine‑Tailed Fox within him.
 </p>
 
-<div class="tech-inline">
+<div class="awards-inline">
 
-<div class="tech-item">
-<span>Director</span>
-<p>Christopher Nolan</p>
+<div class="award-block won">
+<span>🏆 WON</span>
+<p>Tokyo Anime Award</p>
 </div>
 
-<div class="tech-item">
-<span>Music</span>
-<p>Hans Zimmer</p>
+<div class="award-block nominated">
+<span>🎖 NOMINATED</span>
+<p>Best Long Running Anime</p>
 </div>
 
-<div class="tech-item">
-<span>Budget</span>
-<p>$165 Million</p>
+<div class="award-block nominated">
+<span>🎖 NOMINATED</span>
+<p>Best Shonen Franchise</p>
 </div>
 
 </div>
@@ -121,7 +123,11 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 </button>
 
 <button class="wishlist-btn">
-❤️ Wishlist
++ Wishlist
+</button>
+
+<button class="share-btn">
+↗
 </button>
 
 </div>
@@ -132,81 +138,172 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 
 </section>
 
+<!-- MOVIES FEATURE -->
+
 <section class="section">
 
-<div class="section-header">
-<h2>🏆 Awards</h2>
+<div class="movies-header">
+
+<div>
+<h2>Naruto Movies</h2>
+<p>11 Movies Available</p>
 </div>
 
-<div class="awards-inline">
-
-<div class="award-block won">
-<span>Academy Awards</span>
-<p>Won Best Visual Effects</p>
-</div>
-
-<div class="award-block nominated">
-<span>Oscar Nominations</span>
-<p>5 Additional Nominations</p>
-</div>
+<button class="view-btn" onclick="openMovies()">
+View Movies
+</button>
 
 </div>
 
 </section>
 
+<!-- MOVIE OVERLAY -->
+
+<div class="overlay" id="moviesOverlay">
+
+<div class="overlay-box">
+
+<div class="overlay-top">
+
+<h2>Naruto Movie Collection</h2>
+
+<button class="close-btn" onclick="closeMovies()">
+✕
+</button>
+
+</div>
+
+<div class="movies-grid">
+
+<div class="movie-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?movie1">
+<div class="movie-info">
+<h3>The Last: Naruto the Movie</h3>
+<p>2014</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?movie2">
+<div class="movie-info">
+<h3>Road to Ninja</h3>
+<p>2012</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?movie3">
+<div class="movie-info">
+<h3>Blood Prison</h3>
+<p>2011</p>
+</div>
+</div>
+
+<div class="movie-card" onclick="openAnimeMovie()">
+<img src="https://picsum.photos/300/450?movie4">
+<div class="movie-info">
+<h3>Boruto Movie</h3>
+<p>2015</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- STREAMING -->
+
 <section class="section">
 
 <div class="section-header">
-<h2>📺 Where To Watch</h2>
+<h2>Streaming Platforms</h2>
 </div>
 
 <div class="platform-grid">
 
 <div class="platform-card">
-<p>Netflix</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
 </div>
 
 <div class="platform-card">
-<p>Prime Video</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png">
 </div>
 
 <div class="platform-card">
-<p>Disney+</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg">
 </div>
 
 </div>
 
 </section>
+
+<!-- TRAILER -->
 
 <section class="section">
 
 <div class="section-header">
-<h2>🎭 Cast</h2>
+<h2>Official Trailer</h2>
 </div>
 
-<div class="cast-grid">
+<div class="trailer-box">
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?201">
-<div class="cast-info">
-<h3>Matthew McConaughey</h3>
-<p>Cooper</p>
-</div>
-</div>
+<iframe
+src="https://www.youtube.com/embed/QczGoCmX-pI"
+title="Naruto Trailer"
+frameborder="0"
+allowfullscreen>
+</iframe>
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?202">
-<div class="cast-info">
-<h3>Anne Hathaway</h3>
-<p>Brand</p>
-</div>
 </div>
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?203">
-<div class="cast-info">
-<h3>Jessica Chastain</h3>
-<p>Murph</p>
+</section>
+
+<!-- CHARACTERS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Main Characters</h2>
+</div>
+
+<div class="characters-grid">
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?naruto">
+<div class="character-info">
+<h3>Naruto Uzumaki</h3>
+<p>Voice: Junko Takeuchi</p>
+</div>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?sasuke">
+<div class="character-info">
+<h3>Sasuke Uchiha</h3>
+<p>Voice: Noriaki Sugiyama</p>
+</div>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?sakura">
+<div class="character-info">
+<h3>Sakura Haruno</h3>
+<p>Voice: Chie Nakamura</p>
+</div>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?kakashi">
+<div class="character-info">
+<h3>Kakashi Hatake</h3>
+<p>Voice: Kazuhiko Inoue</p>
 </div>
 </div>
 
@@ -214,8 +311,104 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 
 </section>
 
-<script src="index.js"></script>
-<script src="movie.js"></script>
+<!-- STORY ARCS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Story Arcs</h2>
+</div>
+
+<div class="arc-timeline">
+
+<div class="arc-card">
+<h3>Land of Waves Arc</h3>
+<p>Naruto’s first major mission outside the village.</p>
+<span>Episodes 1–19</span>
+</div>
+
+<div class="arc-card">
+<h3>Chunin Exams Arc</h3>
+<p>One of the most iconic tournament arcs in anime.</p>
+<span>Episodes 20–67</span>
+</div>
+
+<div class="arc-card">
+<h3>Sasuke Retrieval Arc</h3>
+<p>Naruto fights to bring Sasuke back to the village.</p>
+<span>Episodes 107–135</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- OPENINGS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Openings & Endings</h2>
+</div>
+
+<div class="music-grid">
+
+<div class="music-card">
+<h3>Opening 1</h3>
+<p>R★O★C★K★S</p>
+</div>
+
+<div class="music-card">
+<h3>Opening 2</h3>
+<p>Haruka Kanata</p>
+</div>
+
+<div class="music-card">
+<h3>Ending 1</h3>
+<p>Wind</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RELATED -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Related Anime</h2>
+</div>
+
+<div class="related-grid">
+
+<div class="anime-card" onclick="openAnime()">
+<img src="https://picsum.photos/300/450?bleach">
+<h3>Bleach</h3>
+</div>
+
+<div class="anime-card" onclick="openAnime()">
+<img src="https://picsum.photos/300/450?onepiece">
+<h3>One Piece</h3>
+</div>
+
+<div class="anime-card" onclick="openAnime()">
+<img src="https://picsum.photos/300/450?jjk">
+<h3>Jujutsu Kaisen</h3>
+</div>
+
+<div class="anime-card" onclick="openAnime()">
+<img src="https://picsum.photos/300/450?dbz">
+<h3>Dragon Ball Z</h3>
+</div>
+
+</div>
+
+</section>
+
+<script src="anime.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
 
 </body>
 </html>

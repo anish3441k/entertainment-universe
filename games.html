@@ -1,153 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Entertainment Details</title>
+<title>Advanced Games Page</title>
 
-<link rel="stylesheet" href="movie.css">
+<link rel="stylesheet" href="games.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+
 <div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
-
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
-
 </div>
 
 <aside class="sidebar" id="sidebar">
 
-<button onclick="window.location.href='index.html'">🏠 Home</button>
+<button onclick="openHome()">🏠 Home</button>
 
-<button onclick="window.location.href='movie.html'">🎬 Movies</button>
+<button onclick="openMovie()">🎬 Movies</button>
 
-<button onclick="window.location.href='web-series.html'">📺 Web Series</button>
+<button onclick="openWebSeries()">📺 Web Series</button>
 
-<button onclick="window.location.href='anime.html'">🎌 Anime</button>
+<button onclick="openAnime()">🎌 Anime</button>
 
-<button onclick="window.location.href='anime-movie.html'">🍿 Anime Movies</button>
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
 
-<button onclick="window.location.href='games.html'">🎮 Games</button>
+<button onclick="openCartoon()">🧸 Cartoons</button>
 
-<button onclick="window.location.href='cartoon-smart.html'">🧸 Cartoons</button>
+<button onclick="openGame()">🎮 Games</button>
 
-<button>❤️ Wishlist</button>
+<button onclick="openWishlist()">❤️ Wishlist</button>
 
-<button>⚙️ Settings</button>
+<button onclick="openSettings()">⚙️ Settings</button>
 
 </aside>
 
 <header class="topbar">
 
-<div class="logo" onclick="window.location.href='index.html'">
+<div class="logo" onclick="openHome()">
 ENTERTAINMENT UNIVERSE
 </div>
 
 <div class="search-box">
-
-<input type="text" placeholder="Search Entertainment...">
-
+<input type="text" onkeypress="globalSearch(event)" placeholder="Search Games, Studios, Characters...">
+<button>Search</button>
 </div>
+
+<div class="profile-ring"></div>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<img class="poster" src="https://picsum.photos/500/700?90">
-
-<div class="movie-info">
-
-<h1>Interstellar</h1>
+<div class="hero-left">
 
 <p class="tagline">
-Mankind was born on Earth. It was never meant to die here.
+NEXT GENERATION GAMING EXPERIENCE
 </p>
 
-<div class="meta">
-
-<span>2014</span>
-<span>Sci‑Fi</span>
-<span>2h 49m</span>
-
-</div>
-
-<div class="ratings">
-
-<div>⭐ IMDb 8.7/10</div>
-<div>🍅 Rotten Tomatoes 91%</div>
-
-</div>
+<h1>CYBERPUNK 2077</h1>
 
 <p class="description">
-
-A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
-
+Step into the neon-lit world of Night City where cybernetic upgrades, futuristic gangs and immersive storytelling redefine open-world gaming.
 </p>
 
-<div class="tech-inline">
+<div class="stats">
 
-<div class="tech-item">
-<span>Director</span>
-<p>Christopher Nolan</p>
+<div class="stat-box">
+<span>Developer</span>
+<p>CD Projekt Red</p>
 </div>
 
-<div class="tech-item">
-<span>Music</span>
-<p>Hans Zimmer</p>
+<div class="stat-box">
+<span>Engine</span>
+<p>RED Engine 4</p>
 </div>
 
-<div class="tech-item">
+<div class="stat-box">
+<span>Platforms</span>
+<p>PC • PS5 • Xbox</p>
+</div>
+
+<div class="stat-box">
+<span>Genre</span>
+<p>RPG • Sci-Fi</p>
+</div>
+
+<div class="stat-box">
 <span>Budget</span>
-<p>$165 Million</p>
+<p>$316 Million</p>
+</div>
+
+<div class="stat-box">
+<span>Collection</span>
+<p>30M+ Copies Sold</p>
+</div>
+
+<div class="stat-box">
+<span>Awards</span>
+<p>GOTY Nominated</p>
+</div>
+
+<div class="stat-box">
+<span>Runtime</span>
+<p>80+ Hours</p>
 </div>
 
 </div>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<button class="watch-btn">
+<button class="play-btn">
 ▶ Watch Trailer
 </button>
 
 <button class="wishlist-btn">
-❤️ Wishlist
++ Wishlist
 </button>
 
 </div>
 
 </div>
 
+<div class="hero-right">
+
+<img src="https://picsum.photos/650/850?cyberpunk" class="game-poster">
+
+<div class="floating-card score-card">
+⭐ 8.9
 </div>
 
-</section>
-
-<section class="section">
-
-<div class="section-header">
-<h2>🏆 Awards</h2>
-</div>
-
-<div class="awards-inline">
-
-<div class="award-block won">
-<span>Academy Awards</span>
-<p>Won Best Visual Effects</p>
-</div>
-
-<div class="award-block nominated">
-<span>Oscar Nominations</span>
-<p>5 Additional Nominations</p>
+<div class="floating-card award-card">
+🏆 GOTY NOMINEE
 </div>
 
 </div>
@@ -157,21 +149,25 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 <section class="section">
 
 <div class="section-header">
-<h2>📺 Where To Watch</h2>
+<h2>Gaming Platforms</h2>
 </div>
 
 <div class="platform-grid">
 
 <div class="platform-card">
-<p>Netflix</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox_one_logo.svg">
 </div>
 
 <div class="platform-card">
-<p>Prime Video</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_logo.svg">
 </div>
 
 <div class="platform-card">
-<p>Disney+</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo.svg">
 </div>
 
 </div>
@@ -181,41 +177,117 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 <section class="section">
 
 <div class="section-header">
-<h2>🎭 Cast</h2>
+<h2>Gameplay Screenshots</h2>
 </div>
 
-<div class="cast-grid">
+<div class="gallery-grid">
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?201">
-<div class="cast-info">
-<h3>Matthew McConaughey</h3>
-<p>Cooper</p>
-</div>
-</div>
+<img src="https://picsum.photos/600/350?game1">
+<img src="https://picsum.photos/600/350?game2">
+<img src="https://picsum.photos/600/350?game3">
+<img src="https://picsum.photos/600/350?game4">
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?202">
-<div class="cast-info">
-<h3>Anne Hathaway</h3>
-<p>Brand</p>
-</div>
 </div>
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?203">
-<div class="cast-info">
-<h3>Jessica Chastain</h3>
-<p>Murph</p>
+</section>
+
+<!-- MAIN CHARACTERS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Main Characters</h2>
 </div>
+
+<div class="character-grid">
+
+<div class="character-card" onclick="openGame()">
+<img src="https://picsum.photos/300/400?char1">
+<h3>V</h3>
+<p>Main Protagonist</p>
+</div>
+
+<div class="character-card" onclick="openGame()">
+<img src="https://picsum.photos/300/400?char2">
+<h3>Johnny Silverhand</h3>
+<p>Legendary Rockerboy</p>
+</div>
+
+<div class="character-card" onclick="openGame()">
+<img src="https://picsum.photos/300/400?char3">
+<h3>Panam</h3>
+<p>Nomad Warrior</p>
+</div>
+
+<div class="character-card" onclick="openGame()">
+<img src="https://picsum.photos/300/400?char4">
+<h3>Judy</h3>
+<p>Tech Specialist</p>
 </div>
 
 </div>
 
 </section>
 
-<script src="index.js"></script>
-<script src="movie.js"></script>
+<!-- VOICE ACTORS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Voice Actors</h2>
+</div>
+
+<div class="character-grid">
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/400?voicea">
+<h3>Keanu Reeves</h3>
+<p>Johnny Silverhand</p>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/400?voiceb">
+<h3>Cherami Leigh</h3>
+<p>Female V</p>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/400?voicec">
+<h3>Gavin Drea</h3>
+<p>Male V</p>
+</div>
+
+<div class="character-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/400?voiced">
+<h3>Emily Woo Zeller</h3>
+<p>Panam</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-header">
+<h2>Official Trailer</h2>
+</div>
+
+<div class="trailer-box">
+
+<iframe
+src="https://www.youtube.com/embed/qIcTM8WXFjk"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<script src="games.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
 
 </body>
 </html>

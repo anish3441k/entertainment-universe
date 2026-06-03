@@ -4,10 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Entertainment Details</title>
+<title>Smart Cartoon Universe</title>
 
-<link rel="stylesheet" href="movie.css">
-
+<link rel="stylesheet" href="cartoon-smart.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -15,114 +14,151 @@
 <body>
 
 <div class="menu-btn" id="menuBtn" onclick="toggleSidebar()">
-
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
-
 </div>
 
 <aside class="sidebar" id="sidebar">
 
-<button onclick="window.location.href='index.html'">🏠 Home</button>
+<button onclick="openHome()">🏠 Home</button>
 
-<button onclick="window.location.href='movie.html'">🎬 Movies</button>
+<button onclick="openMovie()">🎬 Movies</button>
 
-<button onclick="window.location.href='web-series.html'">📺 Web Series</button>
+<button onclick="openWebSeries()">📺 Web Series</button>
 
-<button onclick="window.location.href='anime.html'">🎌 Anime</button>
+<button onclick="openAnime()">🎌 Anime</button>
 
-<button onclick="window.location.href='anime-movie.html'">🍿 Anime Movies</button>
+<button onclick="openAnimeMovie()">🍿 Anime Movies</button>
 
-<button onclick="window.location.href='games.html'">🎮 Games</button>
+<button onclick="openCartoon()">🧸 Cartoons</button>
 
-<button onclick="window.location.href='cartoon-smart.html'">🧸 Cartoons</button>
+<button onclick="openGame()">🎮 Games</button>
 
-<button>❤️ Wishlist</button>
+<button onclick="openWishlist()">❤️ Wishlist</button>
 
-<button>⚙️ Settings</button>
+<button onclick="openSettings()">⚙️ Settings</button>
 
 </aside>
 
 <header class="topbar">
 
-<div class="logo" onclick="window.location.href='index.html'">
+<div class="logo" onclick="openHome()">
 ENTERTAINMENT UNIVERSE
 </div>
 
 <div class="search-box">
-
-<input type="text" placeholder="Search Entertainment...">
-
+<input type="text" onkeypress="globalSearch(event)" id="searchInput" placeholder="Search Cartoons & Animated Movies...">
+<button onclick="searchContent()">Search</button>
 </div>
 
 </header>
 
-<section class="hero">
+<!-- MOVIE HERO -->
+
+<section class="hero" id="movieLayout">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<img class="poster" src="https://picsum.photos/500/700?90">
+<img class="poster" src="https://picsum.photos/500/750?cars">
 
-<div class="movie-info">
+<div class="info">
 
-<h1>Interstellar</h1>
+<p class="type">PIXAR ANIMATED MOVIE</p>
 
-<p class="tagline">
-Mankind was born on Earth. It was never meant to die here.
-</p>
+<h1>Cars</h1>
 
 <div class="meta">
-
-<span>2014</span>
-<span>Sci‑Fi</span>
-<span>2h 49m</span>
-
-</div>
-
-<div class="ratings">
-
-<div>⭐ IMDb 8.7/10</div>
-<div>🍅 Rotten Tomatoes 91%</div>
-
+<span>Movie</span>
+<span>Adventure</span>
+<span>Comedy</span>
+<span>2006</span>
 </div>
 
 <p class="description">
-
-A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
-
+Lightning McQueen learns friendship and teamwork after getting stranded in a forgotten town.
 </p>
 
-<div class="tech-inline">
+<div class="tech-grid">
 
-<div class="tech-item">
-<span>Director</span>
-<p>Christopher Nolan</p>
-</div>
-
-<div class="tech-item">
-<span>Music</span>
-<p>Hans Zimmer</p>
-</div>
-
-<div class="tech-item">
+<div class="tech-box">
 <span>Budget</span>
-<p>$165 Million</p>
+<p>$120 Million</p>
+</div>
+
+<div class="tech-box">
+<span>Collection</span>
+<p>$462 Million</p>
+</div>
+
+<div class="tech-box">
+<span>Studio</span>
+<p>Pixar</p>
+</div>
+
+<div class="tech-box">
+<span>Runtime</span>
+<p>117 min</p>
 </div>
 
 </div>
 
-<div class="hero-buttons">
+</div>
 
-<button class="watch-btn">
-▶ Watch Trailer
-</button>
+</div>
 
-<button class="wishlist-btn">
-❤️ Wishlist
-</button>
+</section>
+
+<!-- SERIES HERO -->
+
+<section class="hero hidden" id="seriesLayout">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<img class="poster" src="https://picsum.photos/500/750?ben10">
+
+<div class="info">
+
+<p class="type">CARTOON NETWORK SERIES</p>
+
+<h1>Ben 10</h1>
+
+<div class="meta">
+<span>4 Seasons</span>
+<span>52 Episodes</span>
+<span>Series</span>
+<span>Action</span>
+</div>
+
+<p class="description">
+Ben discovers the Omnitrix and transforms into powerful aliens to protect Earth.
+</p>
+
+<div class="tech-grid">
+
+<div class="tech-box">
+<span>Creator</span>
+<p>Man of Action</p>
+</div>
+
+<div class="tech-box">
+<span>Episodes</span>
+<p>52</p>
+</div>
+
+<div class="tech-box">
+<span>Language</span>
+<p>English</p>
+</div>
+
+<div class="tech-box">
+<span>Runtime</span>
+<p>22 min</p>
+</div>
 
 </div>
 
@@ -132,90 +168,206 @@ A team of explorers travel through a wormhole in space in an attempt to ensure h
 
 </section>
 
-<section class="section">
-
-<div class="section-header">
-<h2>🏆 Awards</h2>
-</div>
-
-<div class="awards-inline">
-
-<div class="award-block won">
-<span>Academy Awards</span>
-<p>Won Best Visual Effects</p>
-</div>
-
-<div class="award-block nominated">
-<span>Oscar Nominations</span>
-<p>5 Additional Nominations</p>
-</div>
-
-</div>
-
-</section>
+<!-- STREAMING -->
 
 <section class="section">
 
 <div class="section-header">
-<h2>📺 Where To Watch</h2>
+<h2>Streaming Platforms</h2>
 </div>
 
 <div class="platform-grid">
 
 <div class="platform-card">
-<p>Netflix</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
 </div>
 
 <div class="platform-card">
-<p>Prime Video</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png">
 </div>
 
 <div class="platform-card">
-<p>Disney+</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+</div>
+
+<div class="platform-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg">
 </div>
 
 </div>
 
 </section>
+
+<!-- SERIES & MOVIES -->
 
 <section class="section">
 
 <div class="section-header">
-<h2>🎭 Cast</h2>
+<h2>Series & Movies</h2>
 </div>
 
-<div class="cast-grid">
+<div class="cards-grid">
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?201">
-<div class="cast-info">
-<h3>Matthew McConaughey</h3>
-<p>Cooper</p>
-</div>
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?ben">
+<h3>Ben 10</h3>
+<p>Series</p>
 </div>
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?202">
-<div class="cast-info">
-<h3>Anne Hathaway</h3>
-<p>Brand</p>
-</div>
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?carsmovie">
+<h3>Cars</h3>
+<p>Movie</p>
 </div>
 
-<div class="cast-card">
-<img src="https://picsum.photos/300/400?203">
-<div class="cast-info">
-<h3>Jessica Chastain</h3>
-<p>Murph</p>
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?toy">
+<h3>Toy Story</h3>
+<p>Movie</p>
 </div>
+
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?avatar">
+<h3>Avatar</h3>
+<p>Series</p>
 </div>
 
 </div>
 
 </section>
 
-<script src="index.js"></script>
-<script src="movie.js"></script>
+<!-- TRAILER -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Official Trailer</h2>
+</div>
+
+<div class="trailer-box">
+
+<iframe
+src="https://www.youtube.com/embed/0m4j9GY2hL8"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Story Overview</h2>
+</div>
+
+<div class="story-box">
+
+<p>
+Animated adventures featuring heroes, friendship, action, emotional journeys and unforgettable characters across both cartoon series and animated movies.
+</p>
+
+</div>
+
+</section>
+
+<!-- VOICE CAST -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Voice Cast</h2>
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?voice1">
+<h3>Tara Strong</h3>
+<p>Ben Tennyson</p>
+</div>
+
+<div class="content-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?voice2">
+<h3>Owen Wilson</h3>
+<p>Lightning McQueen</p>
+</div>
+
+<div class="content-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?voice3">
+<h3>Tom Kenny</h3>
+<p>SpongeBob</p>
+</div>
+
+<div class="content-card" onclick="openVoiceActor()">
+<img src="https://picsum.photos/300/350?voice4">
+<h3>Jack Black</h3>
+<p>Po</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Screenshots</h2>
+</div>
+
+<div class="gallery-grid">
+
+<img src="https://picsum.photos/500/300?a">
+<img src="https://picsum.photos/500/300?b">
+<img src="https://picsum.photos/500/300?c">
+<img src="https://picsum.photos/500/300?d">
+
+</div>
+
+</section>
+
+<!-- SIMILAR -->
+
+<section class="section">
+
+<div class="section-header">
+<h2>Similar Cartoons</h2>
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?teen">
+<h3>Teen Titans</h3>
+</div>
+
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?frozen">
+<h3>Frozen</h3>
+</div>
+
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?coco">
+<h3>Coco</h3>
+</div>
+
+<div class="content-card" onclick="openCartoon()">
+<img src="https://picsum.photos/300/450?samurai">
+<h3>Samurai Jack</h3>
+</div>
+
+</div>
+
+</section>
+
+<script src="cartoon-smart.js"></script>
+<script src="search-data.js"></script>
+<script src="router.js"></script>
 
 </body>
 </html>
