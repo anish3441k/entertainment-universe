@@ -17,29 +17,3 @@ const data = await response.json();
 return data.results;
 
 }
-
-
-
-function openMovie(){
-window.location.href='movies-browse.html';
-}
-
-function openWebSeries(){
-window.location.href='webseries-browse.html';
-}
-
-function openAnime(){
-window.location.href='anime-browse.html';
-}
-
-function openAnimeMovie(){
-window.location.href='anime-movies-browse.html';
-}
-
-function openGame(){
-window.location.href='games-browse.html';
-}
-
-function openCartoon(){
-window.location.href='cartoons-browse.html';
-}

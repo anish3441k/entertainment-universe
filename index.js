@@ -282,17 +282,41 @@ loadTrendingMovies();
 // ROUTING
 // =========================
 
+function openMovie(){
 
+window.location.href='movies-browse.html';
 
+}
 
+function openWebSeries(){
 
+window.location.href='webseries-browse.html';
 
+}
 
+function openAnime(){
 
+window.location.href='anime-browse.html';
 
+}
 
+function openAnimeMovie(){
 
+window.location.href='anime-movies-browse.html';
 
+}
+
+function openGame(){
+
+window.location.href='games-browse.html';
+
+}
+
+function openCartoon(){
+
+window.location.href='cartoons-browse.html';
+
+}
 
 function openWishlist(){
 
@@ -344,7 +368,11 @@ JSON.stringify(movie)
 }
 
 
+function openMovie(){
 
+window.location.href='movies-browse.html';
+
+}
 
 function openInterstellar(){
 
@@ -428,29 +456,3 @@ window.location.href='movie.html';
 }
 
 
-
-
-
-function openMovie(){
-window.location.href='movies-browse.html';
-}
-
-function openWebSeries(){
-window.location.href='webseries-browse.html';
-}
-
-function openAnime(){
-window.location.href='anime-browse.html';
-}
-
-function openAnimeMovie(){
-window.location.href='anime-movies-browse.html';
-}
-
-function openGame(){
-window.location.href='games-browse.html';
-}
-
-function openCartoon(){
-window.location.href='cartoons-browse.html';
-}

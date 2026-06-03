@@ -58,17 +58,41 @@ document.getElementById('moviesOverlay').style.display='none';
 
 // ROUTING
 
+function openMovie(){
 
+window.location.href='movies-browse.html';
 
+}
 
+function openWebSeries(){
 
+window.location.href='webseries-browse.html';
 
+}
 
+function openAnime(){
 
+window.location.href='anime-browse.html';
 
+}
 
+function openAnimeMovie(){
 
+window.location.href='anime-movies-browse.html';
 
+}
+
+function openGame(){
+
+window.location.href='games-browse.html';
+
+}
+
+function openCartoon(){
+
+window.location.href='cartoons-browse.html';
+
+}
 
 function openWishlist(){
 
@@ -109,28 +133,101 @@ alert("Content not found");
 
 }
 
+async function loadTopAnime(){
 
+const container =
+document.getElementById("animeContainer");
 
-function openMovie(){
-window.location.href='movies-browse.html';
+if(!container) return;
+
+container.innerHTML = "";
+
+const animeList =
+await getTopAnime();
+
+animeList.slice(0,12).forEach(anime => {
+
+const card =
+document.createElement("div");
+
+card.className = "movie-card";
+
+card.innerHTML = `
+
+<img src="${anime.images.jpg.image_url}">
+
+<div class="movie-info">
+
+<h3>${anime.title}</h3>
+
+<p>⭐ ${anime.score}</p>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
 }
 
-function openWebSeries(){
-window.location.href='webseries-browse.html';
+loadTopAnime();
+
+const selectedAnime =
+JSON.parse(localStorage.getItem("selectedAnime"));
+
+if(selectedAnime){
+
+const title =
+document.getElementById("animeTitle");
+
+const poster =
+document.getElementById("animePoster");
+
+const description =
+document.getElementById("animeDescription");
+
+const rating =
+document.getElementById("animeRating");
+
+const japaneseTitle =
+document.getElementById("animeJapaneseTitle");
+
+if(title){
+
+title.innerText =
+selectedAnime.title;
+
 }
 
-function openAnime(){
-window.location.href='anime-browse.html';
+if(poster){
+
+poster.src =
+selectedAnime.images.jpg.image_url;
+
 }
 
-function openAnimeMovie(){
-window.location.href='anime-movies-browse.html';
+if(description){
+
+description.innerText =
+selectedAnime.synopsis;
+
 }
 
-function openGame(){
-window.location.href='games-browse.html';
+if(rating){
+
+rating.innerText =
+"⭐ " + selectedAnime.score;
+
 }
 
-function openCartoon(){
-window.location.href='cartoons-browse.html';
+if(japaneseTitle){
+
+japaneseTitle.innerText =
+selectedAnime.title_japanese || "";
+
 }
+
+}
+

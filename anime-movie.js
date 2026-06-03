@@ -43,17 +43,41 @@ window.location.href='index.html';
 
 // ROUTING
 
+function openMovie(){
 
+window.location.href='movies-browse.html';
 
+}
 
+function openWebSeries(){
 
+window.location.href='webseries-browse.html';
 
+}
 
+function openAnime(){
 
+window.location.href='anime-browse.html';
 
+}
 
+function openAnimeMovie(){
 
+window.location.href='anime-movies-browse.html';
 
+}
+
+function openGame(){
+
+window.location.href='games-browse.html';
+
+}
+
+function openCartoon(){
+
+window.location.href='cartoons-browse.html';
+
+}
 
 function openWishlist(){
 
@@ -92,30 +116,4 @@ alert("Content not found");
 
 }
 
-}
-
-
-
-function openMovie(){
-window.location.href='movies-browse.html';
-}
-
-function openWebSeries(){
-window.location.href='webseries-browse.html';
-}
-
-function openAnime(){
-window.location.href='anime-browse.html';
-}
-
-function openAnimeMovie(){
-window.location.href='anime-movies-browse.html';
-}
-
-function openGame(){
-window.location.href='games-browse.html';
-}
-
-function openCartoon(){
-window.location.href='cartoons-browse.html';
 }
