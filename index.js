@@ -364,7 +364,6 @@ localStorage.setItem(
 JSON.stringify(movie)
 );
 
-window.location.href='movie.html';
 
 }
 
