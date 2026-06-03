@@ -367,3 +367,92 @@ JSON.stringify(movie)
 
 }
 
+
+function openMovie(){
+
+window.location.href='movies-browse.html';
+
+}
+
+function openInterstellar(){
+
+const movie={
+
+title:"Interstellar",
+
+description:"A team of explorers travel through a wormhole in space.",
+
+poster:"https://picsum.photos/500/700?interstellar",
+
+rating:"8.7",
+
+genre:"Sci-Fi",
+
+year:"2014"
+
+};
+
+localStorage.setItem(
+"selectedMovie",
+JSON.stringify(movie)
+);
+
+window.location.href='movie.html';
+
+}
+
+function openBatman(){
+
+const movie={
+
+title:"Batman",
+
+description:"Batman protects Gotham City from dangerous criminals.",
+
+poster:"https://picsum.photos/500/700?batman",
+
+rating:"8.1",
+
+genre:"Action",
+
+year:"2022"
+
+};
+
+localStorage.setItem(
+"selectedMovie",
+JSON.stringify(movie)
+);
+
+window.location.href='movie.html';
+
+}
+
+function openDune(){
+
+const movie={
+
+title:"Dune",
+
+description:"Action packed cinematic universe.",
+
+poster:"https://picsum.photos/500/700?dune",
+
+rating:"8.0",
+
+genre:"Adventure",
+
+year:"2021"
+
+};
+
+localStorage.setItem(
+"selectedMovie",
+JSON.stringify(movie)
+);
+
+window.location.href='movie.html';
+
+}
+
+
