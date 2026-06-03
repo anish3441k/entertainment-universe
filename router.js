@@ -1,46 +1,45 @@
-
 // ROUTER SYSTEM
 
-function openHome() {
+function openHome(){
 window.location.href = "index.html";
 }
 
-function openMovie() {
-window.location.href = "movie.html";
+function openMovie(){
+window.location.href = "movies-browse.html";
 }
 
-function openWebSeries() {
-window.location.href = "web-series.html";
+function openWebSeries(){
+window.location.href = "webseries-browse.html";
 }
 
-function openAnime() {
-window.location.href = "anime.html";
+function openAnime(){
+window.location.href = "anime-browse.html";
 }
 
-function openAnimeMovie() {
-window.location.href = "anime-movie.html";
+function openAnimeMovie(){
+window.location.href = "anime-movies-browse.html";
 }
 
-function openCartoon() {
-window.location.href = "cartoon-smart.html";
+function openCartoon(){
+window.location.href = "cartoons-browse.html";
 }
 
-function openGame() {
-window.location.href = "games.html";
+function openGame(){
+window.location.href = "games-browse.html";
 }
 
-function openActor() {
+function openActor(){
 window.location.href = "actor.html";
 }
 
-function openVoiceActor() {
+function openVoiceActor(){
 window.location.href = "voice-actor.html";
 }
 
-function openWishlist() {
+function openWishlist(){
 alert("Wishlist Coming Soon");
 }
 
-function openSettings() {
+function openSettings(){
 alert("Settings Coming Soon");
 }
