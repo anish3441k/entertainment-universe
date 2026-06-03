@@ -290,31 +290,31 @@ window.location.href = "movies-browse.html";
 
 function openWebSeries(){
 
-window.location.href = "web-series.html";
+window.location.href = "webseries-browse.html";
 
 }
 
 function openAnime(){
 
-window.location.href = "anime.html";
+window.location.href = "anime-browse.html";
 
 }
 
 function openAnimeMovie(){
 
-window.location.href = "anime-movie.html";
+window.location.href = "anime-movies-browse.html";
 
 }
 
 function openGame(){
 
-window.location.href = "games.html";
+window.location.href = "games-browse.html";
 
 }
 
 function openCartoon(){
 
-window.location.href = "cartoon.html";
+window.location.href = "cartoons-browse.html";
 
 }
 
@@ -340,3 +340,31 @@ searchTMDB("batman")
 console.log(data);
 
 });
+
+function openBatman(){
+
+const movie={
+
+title:"Batman",
+
+description:"Batman protects Gotham City from dangerous criminals.",
+
+poster:"https://picsum.photos/500/700?batman",
+
+rating:"8.1",
+
+genre:"Action",
+
+year:"2022"
+
+};
+
+localStorage.setItem(
+"selectedMovie",
+JSON.stringify(movie)
+);
+
+window.location.href='movie.html';
+
+}
+
